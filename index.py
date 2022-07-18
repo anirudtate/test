@@ -8,7 +8,7 @@ def index():
     todo = ""
     if request.method == 'POST':
         todo = request.form['todo']
-        todos.append(todo)
+        todos.insert(0,todo)
     return render_template("index.html", todos=todos)
 
 if __name__ == "__main__":
