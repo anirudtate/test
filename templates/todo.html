@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo list</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    ul {
+      padding: 0;
+      list-style-type: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Todo List App</h1>
+  <form action="/todos" method="POST">
+    <input type="text" name="todo" placeholder="Enter a todo">
+      <input type="submit"></br>
+  </form>
+  <ul>
+    {% for todo in todos %}
+      <li>{{todo}}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
